@@ -1,0 +1,113 @@
+.tech__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--color-primary);
+  text-align: center;
+  gap: 2rem;
+}
+
+.tech__cards > div {
+  background-color: var(--color-bg-variant);
+  padding: 2.4rem 3rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.tech__cards > div:hover {
+  background-color: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.tech__cards-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.tech__cards h3 {
+  color: var(--color-light);
+  margin-bottom: 1.5rem;
+}
+
+#techs .techs__intro {
+  margin-bottom: 3rem;
+}
+
+.techs__intro p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-light);
+}
+
+.tech__card {
+  display: flex;
+  flex-direction: column;
+  font-size: 3rem;
+  width: 6rem;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.tech__card:hover {
+  font-size: 4rem;
+  color: var(--color-strong);
+}
+
+.tech__card span {
+  font-size: 1rem;
+  color: var(--color-strong);
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES)=== */
+
+@media screen and (max-width: 1024px) {
+  #techs h2 {
+    margin-bottom: 2rem;
+  }
+
+  .tech__cards {
+    grid-template-columns: 1fr;
+  }
+  .tech__cards > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+/* === MEDIA QUERIES (SMALL DEVICES)=== */
+
+@media screen and (max-width: 600px) {
+  .tech__cards {
+    gap: 3rem;
+  }
+
+  .tech__cards > div {
+    width: 100%;
+    padding: 1rem 0.5rem;
+  }
+
+  .tech__cards-types {
+    gap: 0;
+  }
+
+  .tech__card {
+    font-size: 2.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .tech__card:hover {
+    font-size: 3rem;
+  }
+
+  .tech__card span {
+    font-size: 0.8rem;
+  }
+}

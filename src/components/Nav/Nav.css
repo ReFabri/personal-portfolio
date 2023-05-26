@@ -1,0 +1,50 @@
+#nav__bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: fit-content;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-primary-variant);
+}
+
+.nav__icon {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 0.9rem;
+  border-radius: 100px;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+
+.nav__icon:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav__icon.active {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.nav__text {
+  margin: 0 auto;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: width 0.4s, height 0.4s ease-in-out;
+}
+
+#nav__bar:hover .nav__text {
+  width: fit-content;
+  height: 2rem;
+}

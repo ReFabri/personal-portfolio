@@ -1,0 +1,18 @@
+.cta {
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.2rem;
+  justify-content: left;
+}
+
+.btn-talk {
+  font-weight: bolder;
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES)=== */
+
+@media screen and (max-width: 900px) {
+  .btn-cv {
+    background-color: var(--color-bg);
+  }
+}

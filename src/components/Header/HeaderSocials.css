@@ -1,0 +1,24 @@
+.header__socials {
+  position: absolute;
+  left: 1vw;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header__socials::after {
+  content: "";
+  width: 1px;
+  height: 2rem;
+  background-color: var(--color-primary);
+}
+
+/* === MEDIA QUERIES (MEDIUM DEVICES)=== */
+
+@media screen and (max-width: 900px) {
+  .header__socials {
+    display: none;
+  }
+}
