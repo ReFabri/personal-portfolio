@@ -1,6 +1,6 @@
 import "./Portfolio.css";
-
 import ImageModal from "../UI/ImageModal";
+import i18n from "../../translate/i18n";
 
 const Portfolio = () => {
   const projects = [
@@ -14,8 +14,7 @@ const Portfolio = () => {
       image3:
         "https://res.cloudinary.com/r73fgem9f/image/upload/v1685041924/Portfolio/AllTech3_r9xpdx.jpg",
       title: "AllTech",
-      description:
-        "A fullstack e-commerce application, the frontend was built with Vite, React, Redux and Bootstrap. The backend was built with NodeJs, Express, and MongoDB.",
+      description: i18n.t("portfolio.p1Description"),
       github: "https://github.com/ReFabri/Alltech",
       demo: "https://jade-light-salamander.cyclic.app/",
     },
@@ -29,8 +28,7 @@ const Portfolio = () => {
       image3:
         "https://res.cloudinary.com/r73fgem9f/image/upload/v1685041925/Portfolio/YelpCamp3_xrplml.jpg",
       title: "YelpCamp",
-      description:
-        "The YelpCamp website is a fullstack project done as part of Colt Steele's Web Development course using NodeJs with Express for the backend and MongoDB for the Database",
+      description: i18n.t("portfolio.p2Description"),
       github: "https://github.com/ReFabri/YelpCamp",
       demo: "https://excited-dove-hat.cyclic.app/",
     },
@@ -38,8 +36,8 @@ const Portfolio = () => {
 
   return (
     <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
+      <h5>{i18n.t("portfolio.titleH5")}</h5>
+      <h2>{i18n.t("portfolio.titleH2")}</h2>
 
       <div className="portfolio__container">
         {projects.map((project, index) => {
@@ -77,19 +75,19 @@ const Portfolio = () => {
 
               <ImageModal
                 src={project.mainImage}
-                alt={`${project.title} main image`}
+                alt={`${project.title} ${i18n.t("portfolio.imgAlt1")}`}
                 className="portfolio__item-image1"
               />
 
               <ImageModal
                 src={project.image2}
-                alt={`${project.title} second image`}
+                alt={`${project.title} ${i18n.t("portfolio.imgAlt2")}`}
                 className="portfolio__item-image2"
               />
 
               <ImageModal
                 src={project.image3}
-                alt={`${project.title} third image`}
+                alt={`${project.title} ${i18n.t("portfolio.imgAlt3")}`}
                 className="portfolio__item-image3"
               />
             </article>

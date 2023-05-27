@@ -4,6 +4,7 @@ import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { FaGlasses } from "react-icons/fa";
 import { RiServiceLine } from "react-icons/ri";
+import i18n from "../../translate/i18n";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
@@ -18,7 +19,7 @@ const Nav = () => {
           >
             <AiOutlineHome />
           </div>
-          <p className="nav__text">Home</p>
+          <p className="nav__text">{i18n.t("nav.home")}</p>
         </div>
       </a>
 
@@ -32,7 +33,7 @@ const Nav = () => {
           >
             <AiOutlineUser />
           </div>
-          <p className="nav__text">About</p>
+          <p className="nav__text">{i18n.t("nav.about")}</p>
         </div>
       </a>
 
@@ -46,7 +47,7 @@ const Nav = () => {
           >
             <FaGlasses />
           </div>
-          <p className="nav__text">Stack</p>
+          <p className="nav__text">{i18n.t("nav.stack")}</p>
         </div>
       </a>
 
@@ -60,7 +61,7 @@ const Nav = () => {
           >
             <RiServiceLine />
           </div>
-          <p className="nav__text">Portfolio</p>
+          <p className="nav__text">{i18n.t("nav.portfolio")}</p>
         </div>
       </a>
 
@@ -74,7 +75,7 @@ const Nav = () => {
           >
             <BiMessageSquareDetail />
           </div>
-          <p className="nav__text">Contact</p>
+          <p className="nav__text">{i18n.t("nav.contact")}</p>
         </div>
       </a>
     </nav>

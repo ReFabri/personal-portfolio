@@ -4,34 +4,34 @@ import { MdOutlineEmail } from "react-icons/md";
 import { BsWhatsapp } from "react-icons/bs";
 import Modal from "../UI/Modal";
 import emailjs from "@emailjs/browser";
+import i18n from "../../translate/i18n";
 
 const Contact = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMsgSuccess, setIsMsgSuccess] = useState(false);
   const form = useRef();
 
-  //TODO Fix the message based on the selected i18n language
-  const whatsappUrl = `https://wa.me/${5511950591975}?text=${encodeURIComponent(
-    "Hello!"
+  const whatsappUrl = `https://wa.me/${5511972305109}?text=${encodeURIComponent(
+    i18n.t("contact.whatsMsg")
   )}`;
 
   const modalMsg = {
     success: (
       <Modal>
-        <h2>Email sent successfully</h2>
-        <h3 style={{ margin: "2rem 0" }}>
-          Thank you for contacting me. I will get back to you soon.
-        </h3>
-        <button className="btn btn-primary">Close</button>
+        <h2>{i18n.t("contact.modalH2Success")}</h2>
+        <h3 style={{ margin: "2rem 0" }}>{i18n.t("contact.modalH3Success")}</h3>
+        <button className="btn btn-primary">
+          {i18n.t("contact.modalBtn")}
+        </button>
       </Modal>
     ),
     error: (
       <Modal>
-        <h2>Something went wrong..</h2>
-        <h3 style={{ margin: "2rem 0" }}>
-          Please try again later, or if you prefer try another contact option.
-        </h3>
-        <button className="btn btn-primary">Close</button>
+        <h2>{i18n.t("contact.modalH2Error")}</h2>
+        <h3 style={{ margin: "2rem 0" }}>{i18n.t("contact.modalH3Error")}</h3>
+        <button className="btn btn-primary">
+          {i18n.t("contact.modalBtn")}
+        </button>
       </Modal>
     ),
   };
@@ -59,8 +59,8 @@ const Contact = () => {
 
   return (
     <section id="contact">
-      <h5>Get In Touch</h5>
-      <h2>Contact Me</h2>
+      <h5>{i18n.t("contact.titleH5")}</h5>
+      <h2>{i18n.t("contact.titleH2")}</h2>
 
       <div className="container contact__container">
         <div className="contact__options">
@@ -71,9 +71,9 @@ const Contact = () => {
             <a
               href="mailto:renato.f.fabri@gmail.com"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              Send a message
+              {i18n.t("contact.bigBtnMsg")}
             </a>
           </article>
 
@@ -81,27 +81,33 @@ const Contact = () => {
             <BsWhatsapp className="contact__option-icon" />
             <h4>Whatsapp</h4>
             <h5>+(55)(11) 97230-5109</h5>
-            <a href={whatsappUrl} target="_blank" rel="noreferrer">
-              Send a message
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              {i18n.t("contact.bigBtnMsg")}
             </a>
           </article>
         </div>
+
         <form ref={form} onSubmit={sendEmail} className="contact__form">
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder={i18n.t("contact.formNamePlaceholder")}
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            name="email"
+            placeholder={i18n.t("contact.formEmailPlaceholder")}
+            required
+          />
           <textarea
             name="message"
             rows="7"
-            placeholder="Your Message"
+            placeholder={i18n.t("contact.formMsgPlaceholder")}
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+            {i18n.t("contact.formBtn")}
           </button>
         </form>
         {isModalOpen && (

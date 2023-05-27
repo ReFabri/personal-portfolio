@@ -1,14 +1,15 @@
 import "./CallToAction.css";
 import CV from "../../assets/cv.pdf";
+import i18n from "../../translate/i18n";
 
 const CallToAction = () => {
   return (
     <div className="cta">
       <a href={CV} download className="btn btn-cv">
-        Download CV
+        {i18n.t("header.cta.cv")}
       </a>
       <a href="#contact" className="btn btn-primary btn-talk">
-        Let&apos;s Talk
+        {i18n.t("header.cta.contact")}
       </a>
     </div>
   );

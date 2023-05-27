@@ -24,15 +24,16 @@ import {
 } from "react-icons/si";
 import { TbCodeMinus } from "react-icons/tb";
 import { VscTerminalLinux } from "react-icons/vsc";
+import i18n from "../../translate/i18n";
 
 function Techs() {
   return (
     <section id="techs">
-      <h5>things I can do</h5>
-      <h2>My Toolbox</h2>
+      <h5>{i18n.t("techs.titleH5")}</h5>
+      <h2>{i18n.t("techs.titleH2")}</h2>
       <div className="container techs__intro">
-        <p>Is this the stack you need? let&apos;s work together!</p>
-        <p>You need something else? I am a very quick learner, really!</p>
+        <p>{i18n.t("techs.p1")}</p>
+        <p>{i18n.t("techs.p2")}</p>
       </div>
       <div className="container tech__cards">
         {/* FRONTEND */}
@@ -134,7 +135,7 @@ function Techs() {
         {/* TOOLS */}
         <div>
           <div>
-            <h3>Tools</h3>
+            <h3>{i18n.t("techs.tools")}</h3>
           </div>
           <div className="tech__cards-types">
             <article className="tech__card">

@@ -1,6 +1,7 @@
 import "./Footer.css";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import i18n from "../../translate/i18n";
 
 const Footer = () => {
   //TODO Create and add my Linkedin account link.
@@ -11,19 +12,19 @@ const Footer = () => {
       </a>
       <ul className="permalinks">
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">{i18n.t("footer.home")}</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about">{i18n.t("footer.about")}</a>
         </li>
         <li>
-          <a href="#techs">Stack</a>
+          <a href="#techs">{i18n.t("footer.stack")}</a>
         </li>
         <li>
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">{i18n.t("footer.portfolio")}</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">{i18n.t("footer.contact")}</a>
         </li>
       </ul>
 
@@ -37,7 +38,7 @@ const Footer = () => {
       </div>
 
       <div className="footer__copyright">
-        <small>&copy;Renato Fabricio. All rights reserved.</small>
+        <small>&copy; {i18n.t("footer.small")}</small>
       </div>
     </footer>
   );
