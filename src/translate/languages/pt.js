@@ -9,13 +9,13 @@ const messages = {
         contact: "Contato",
       },
       header: {
-        titleH1: "desenvolvedor",
+        titleH1: "developer",
         titleH2: "Olá, eu sou Renato Fabricio",
         subtitleH2: "Vamos trabalhar juntos",
         link: "Role para baixo",
         cta: {
           cv: "Baixar CV",
-          contact: "Vamos conversar",
+          contact: "Fale Comigo",
         },
       },
       ui: {},
