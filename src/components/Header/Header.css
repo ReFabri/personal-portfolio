@@ -184,6 +184,9 @@ header {
 
   .header__title h2 {
     font-size: 1.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    max-width: 90%;
   }
 
   .header__title-bottom {
