@@ -48,3 +48,11 @@
   width: fit-content;
   height: 2rem;
 }
+
+/* === MEDIA QUERIES (SMALL DEVICES)=== */
+
+@media screen and (max-width: 600px) {
+  #nav__bar {
+    bottom: 0.2rem;
+  }
+}
