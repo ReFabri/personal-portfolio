@@ -68,7 +68,8 @@
 
 @media screen and (max-width: 1024px) {
   #techs h2 {
-    margin-bottom: 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
   }
 
   .tech__cards {
@@ -84,6 +85,9 @@
 /* === MEDIA QUERIES (SMALL DEVICES)=== */
 
 @media screen and (max-width: 600px) {
+  .techs__intro p {
+    font-size: 1rem;
+  }
   .tech__cards {
     gap: 3rem;
   }
