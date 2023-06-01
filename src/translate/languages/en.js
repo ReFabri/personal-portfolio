@@ -36,7 +36,7 @@ const messages = {
       techs: {
         titleH5: "things I can do",
         titleH2: "My Toolbox",
-        p1: "Is this the stack you need? let&apos;s work together!",
+        p1: "Is this the stack you need? let's work together!",
         p2: "Need something else? I am a very quick learner, really!",
         tools: "Tools",
       },
