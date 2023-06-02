@@ -14,7 +14,7 @@ const messages = {
         subtitleH2: "Let's work together",
         link: "Scroll Down",
         cta: {
-          cv: "Download CV",
+          about: "About Me",
           contact: "Let's Talk",
         },
       },
