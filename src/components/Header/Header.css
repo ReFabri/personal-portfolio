@@ -190,12 +190,12 @@ header {
   }
 
   .header__title-bottom {
-    top: 55vh;
+    top: 50vh;
   }
 }
 
 @media screen and (max-width: 400px) {
   .header__title-bottom {
-    top: 50vh;
+    top: 45vh;
   }
 }
