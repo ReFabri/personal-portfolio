@@ -1,5 +1,5 @@
 header {
-  height: 100vh;
+  height: 100svh;
   padding: 3vw;
   background-color: var(--color-bg);
   overflow: hidden;
